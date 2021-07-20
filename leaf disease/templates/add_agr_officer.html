@@ -1,0 +1,47 @@
+{% extends 'admin_panel.html' %}
+{% block body %}
+<form action="/add_agrioffice_add" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table table-bordered">
+    <tr>
+      <th scope="row" width="150px">Name</th>
+      <td><input type="text" name="textfield" id="textfield"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Date of birth</th>
+      <th><input type="date" name="textfield2" id="textfield2"  required="required" class="form-control" min='1899-01-01' max='2000-03-03'/></th>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <th><input type="text" name="textfield3" id="textfield3"  required="required" class="form-control"/></th>
+    </tr>
+    <tr>
+      <th scope="row">Pincode</th>
+      <td><input type="text" name="textfield4" id="textfield4"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Qualification</th>
+      <td><input type="text" name="textfield5" id="textfield5"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Experience</th>
+      <td><input type="text" name="textfield6" id="textfield6"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Email Address</th>
+      <td><input type="text" name="textfield7" id="textfield7"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td><input type="text" name="textfield8" id="textfield8"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Choose Image</th>
+      <td><input type="file" name="fileField" id="fileField"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th></th>
+       <th><input type="submit" name="button" id="button" value="Add" class="btn btn-primary"/></th>
+    </tr>
+  </table>
+</form>
+{% endblock %}

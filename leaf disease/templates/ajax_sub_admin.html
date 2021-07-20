@@ -1,0 +1,19 @@
+<table width="303" border="1" id="vo">
+
+    <tr>
+      <th width="39" scope="row">sl/no</th>
+      <td width="41">name</td>
+      <td width="30">dob</td>
+      <td width="70">contact</td>
+      <td width="89">&nbsp;</td>
+    </tr>
+      {% for k in data %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ k['name'] }}</td>
+      <td>{{ k['dob'] }}</td>
+      <td>{{ k['email'] }}<br>{{ k['phone'] }}</td>
+      <td><a href="/remove_sub/{{ k['login_id'] }}">Remove</a></td>
+    </tr>
+      {% endfor %}
+  </table>

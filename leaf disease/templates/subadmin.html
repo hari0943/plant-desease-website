@@ -1,0 +1,32 @@
+{% extends 'admin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/add_subadmin_add">
+  <table class="table table-bordered">
+    <tr>
+      <th scope="row" width="200px">Name</th>
+      <td><input type="text" name="textfield" id="textfield" required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Dob</th>
+      <td><input type="date" name="dob" id="dob"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><input type="text" name="textfield3" id="textfield3"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td><input type="number" name="textfield4" id="textfield4"  required="required" class="form-control"/></td>
+    </tr>
+      <tr>
+      <th scope="row">Password</th>
+      <td><input type="password" name="password" id="password"  required="required" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th></th>
+      <th><input type="submit" name="button" id="button" value="Add" class="btn btn-primary"/></th>
+    </tr>
+  </table>
+
+</form>
+{% endblock %}

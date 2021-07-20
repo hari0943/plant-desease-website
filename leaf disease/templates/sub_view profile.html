@@ -1,0 +1,33 @@
+{% extends 'subadmin_panel.html' %}
+{% block body %}
+
+
+  <table width="200" border="1" class="table table-bordered">
+          <thead class="thead-light">
+
+    <tr>
+
+      <th>name</th>
+      <td>{{ data["name"] }}</td>
+    </tr>
+    <tr>
+      <th>dob</th>
+      <td>{{ data["dob"] }}</td>
+    </tr>
+    <tr>
+      <th>email</th>
+      <td>{{data["email"] }}</td>
+    </tr>
+    <tr>
+      <th>phone</th>
+      <td>{{data["phone"] }}</td>
+    </tr>
+          </thead>
+
+{#    <tr>#}
+{#      <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="Submit" /></th>#}
+{#    </tr>#}
+  </table>
+{#</form>#}
+</form>
+{% endblock %}

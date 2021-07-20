@@ -1,0 +1,16 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p><a href="/add_leaf">Add leaf</a></p>
+<p><a href="/view_leaf">View leaf </a></p>
+<p><a href="/complaint">view complaint</a></p>
+<p><a href="/fertilizer">View fertilizer</a></p>
+<p><a href="/add_fertilizer">add fertilizer</a></p>
+<p><a href="/add_tips">Add tips</a></p>
+<p><a href="/view_tips">View tips</a></p>
+<p><a href="/log_out">log out</a></p>
+</body>
+</html>

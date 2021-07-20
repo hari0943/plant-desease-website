@@ -1,0 +1,20 @@
+<table width="200" border="1">
+
+    <tr>
+      <th scope="row">s/no</th>
+      <td>name</td>
+      <td>description</td>
+      <td>pic</td>
+      <td>&nbsp;</td>
+    </tr>
+      {% for k in data %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ k['name'] }}</td>
+      <td>{{ k['description'] }}</td>
+      <td><img src="../static/fertilizer/{{ k['pic'] }}" width="90"></td>
+      <td><a href="/remove_sub/{{ k['login_id'] }}">Remove</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>

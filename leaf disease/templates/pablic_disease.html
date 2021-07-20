@@ -1,0 +1,25 @@
+{% extends 'public_pannel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table table-bordered">
+          <thead class="thead-light">
+    <tr>
+      <th width="34" height="53" scope="row">s/no</th>
+      <th width="43">name</td>
+      <th width="45">photo</th>
+      <th width="94">discription</th>
+      <th width="71">disease</th>
+    </tr>
+            {% for k in data %}
+                </thead>
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ k['name'] }}&nbsp;</td>
+      <td><img src="{{ k['phtoto'] }}" width="90"></td>
+      <td>&nbsp;{{ k['discreption'] }}</td>
+      <td>{{ k['disease'] }}&nbsp;</td>
+    </tr>
+            {% endfor %}
+  </table>
+</form>
+{% endblock %}

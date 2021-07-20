@@ -1,0 +1,38 @@
+{% extends 'officer_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+   <table  class="table table-bordered">
+          <thead >
+
+
+    <tr>
+      <th width="50px" scope="row">#</th>
+      <th width="120px">Date</th>
+      <th width="190px">Name</th>
+      <th>Doubts</th>
+     
+        <th>Reply</th>
+    </tr>
+      {% for k in data %}
+          </thead>
+
+    <tr>
+      <th scope="row">&nbsp;{{ loop.index }}</th>
+      <td>{{ k['date'] }}</td>
+      <td>{{ k['name'] }}</td>
+      <td>&nbsp;{{ k['doubts']}}</td>
+     
+      <td>
+
+          {% if k['replay']=='pending' %}
+          <a href="/add_reply/{{ k['doubts_id'] }}">Reply</a>
+          {% else %}
+          {{ k['replay'] }}
+
+      {% endif %}
+      </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

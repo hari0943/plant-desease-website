@@ -1,0 +1,25 @@
+{% extends 'admin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table table-bordered">
+        
+    <tr>
+      <th width="50px" scope="row">s/no</th>
+      <th>Date</td>
+        <th>Name</th>
+        <th>Email</th>
+      <th>Feedback</td>
+    </tr>
+      {% for k in data %}
+       
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ k['date'] }}</td>
+      <td>&nbsp;{{ k['name'] }}</td>
+      <td>{{ k['email'] }}</td>
+      <td>{{ k['feedback'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

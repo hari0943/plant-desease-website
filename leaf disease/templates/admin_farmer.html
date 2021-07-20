@@ -1,0 +1,32 @@
+{% extends 'admin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table  class="table table-bordered">
+        
+
+    <tr>
+      <th width="50px" scope="row">sl/no</th>
+        <th>Name</th>
+      <th >Dob</th>
+      <th >Gender</th>
+      <th >Place</th>
+      <th >Pin</th>
+      <th >Email</th>
+      <th >Phone</th>
+    </tr>
+    {% for k in data %}
+       
+    <tr>
+      <td scope="row">&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ k['name'] }}</td>
+      <td>{{ k['dob'] }}&nbsp;</td>
+      <td>{{ k['gender'] }}&nbsp;</td>
+      <td>&nbsp;{{ k['place'] }}</td>
+      <td>{{ k['pin'] }}</td>
+      <td>{{ k['email'] }}</td>
+      <td>{{ k['phone'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

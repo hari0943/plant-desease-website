@@ -1,0 +1,31 @@
+{% extends 'admin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+
+
+
+  
+  <table width="200" border="1" class="table table-bordered">
+         
+
+    <tr>
+      <th width="50px" scope="row">#</th>
+      <th>Name</th>
+      <th>Dob</th>
+      <th>Contact</th>
+      <th>&nbsp;</th>
+    </tr>
+      {% for k in data %}
+        
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ k['name'] }}</td>
+      <td>{{ k['dob'] }}</td>
+      <td>{{ k['email'] }}<br>{{ k['phone'] }}</td>
+        <td width="50px"><button type="button" class="btn btn-danger" style="padding: 4px 23px;"><a href="/remove_sub/{{ k['subadmin_id'] }}"><font color="#FFFFFF">Remove</font></a></button></td>
+
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

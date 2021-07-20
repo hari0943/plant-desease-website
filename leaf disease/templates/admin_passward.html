@@ -1,0 +1,24 @@
+{% extends 'admin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/change_password">
+  <table class="table table-bordered">
+    <tr>
+      <th scope="row" width="200px">Current passward</th>
+      <td><input type="password" name="cp" id="cp" class="form-control" required /></td>
+    </tr>
+       <tr>
+      <th scope="row">New password</th>
+      <td><input type="password" name="np" id="np" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Confirm password</th>
+      <td><input type="password" name="cnp" id="cnp" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td></td>
+             <th ><input type="submit" name="button" id="button" value="submit" class="btn btn-primary"/></th>
+
+    </tr>
+  </table>
+</form>
+{% endblock %}

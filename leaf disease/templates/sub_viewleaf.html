@@ -1,0 +1,39 @@
+{% extends 'subadmin_panel.html' %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="/view_leafpost" >
+
+  <table class="table table-bordered" style="width: fit-content;">
+    <td>Search Here</td>
+    <td>  <input type="text" class="form-control" name="s"></td>
+    <td><input type="submit" value="Search" class="btn btn-success"/> </td>
+  
+  </table>
+  
+   <table  class="table table-bordered">
+       
+
+    <tr>
+      <th width="50px" scope="row">s/no</th>
+      <th>Name</th>
+      <th>Photo</th>
+      <th>Disease</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    {% for k in data %}
+       
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ k['name'] }}&nbsp;</td>
+      <td><img src="{{ k['phtoto'] }}" width="90"></td>
+      <td>{{ k['discreption'] }}&nbsp;</td>
+      <td>{{ k['disease'] }}&nbsp;</td>
+      <td width="50px"><a href="/deleteleaf/{{ k['leaf_id'] }}" class="btn btn-danger">Delete</a></td></td>
+
+     
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+{% endblock %}

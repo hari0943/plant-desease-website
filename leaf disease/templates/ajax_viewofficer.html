@@ -1,0 +1,21 @@
+<table width="271" border="1" id="vo">
+
+    <tr>
+      <th width="39" scope="row">sl/no</th>
+      <td width="41">name</td>
+        <td width="41">pic</td>
+      <td width="56">phone</td>
+        <td width="56">email</td>
+      <td width="107">&nbsp;</td>
+    </tr>
+       {% for k in data %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>&nbsp;{{ k['name'] }}</td>
+        <td><img src="..{{ k['image'] }}" width="70"></td>
+      <td>{{ k['phone'] }}</td>
+         <td>{{ k['email'] }}</td>
+      <td><a href="remove_officer/{{ k['login_id'] }}">Remove</a></td>
+    </tr>
+      {% endfor %}
+  </table>

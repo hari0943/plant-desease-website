@@ -1,0 +1,18 @@
+{% extends 'subadmin_panel.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/reply_add">
+  <table class=table table-hover>
+    <tr>
+        <input type="hidden" name="cid" id="cid" value="{{ cid }}"/>
+      <th scope="row">Reply</th>
+      <td><textarea  class="form-control" name="textfield"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2"  align="center"><input type="submit" name="button" id="button" value="reply" class="btn btn-primary"/></th>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

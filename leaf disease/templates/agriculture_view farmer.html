@@ -1,0 +1,30 @@
+{% extends 'officer_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="378" border="1">
+
+    <tr>
+      <th width="21" scope="row">s/no</th>
+      <td width="41">name</td>
+      <td width="31">dob</td>
+      <td width="55">gender</td>
+      <td width="47">place</td>
+      <td width="40">pin</td>
+      <td width="44">email</td>
+      <td width="47">phone</td>
+    </tr>
+       {% for k in data %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ k['name'] }}</td>
+      <td>{{ k['dob'] }}</td>
+      <td>{{ k['gender'] }}</td>
+      <td>{{ k['place'] }}</td>
+      <td>&nbsp;{{ k['pin'] }}</td>
+      <td>{{ k['email'] }}</td>
+      <td>{{ k['phone'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

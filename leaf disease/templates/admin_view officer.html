@@ -1,0 +1,39 @@
+{% extends 'admin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/view_officer_post">
+
+  <table class="table table-bordered" style="width: fit-content;">
+    <td>Search Here</td>
+    <td>  <input type="text" class="form-control" name="s"></td>
+    <td><input type="submit" value="Search" class="btn btn-success"/> </td>
+  
+  </table>
+
+  <table class="table table-bordered">
+        
+    <tr>
+      <th width="50px" scope="row">#</th>
+      <th>Name</th>
+      <th>Dob</th>
+      <th>Place</th>
+        <th>Image</th>
+      <th >Phone</td>
+        <th >Email</th>
+      <th width="107">&nbsp;</th>
+    </tr>
+       {% for k in data %}
+         
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>&nbsp;{{ k['name'] }}</td>
+      <td>{{ k['dob'] }}</td>
+      <td>{{ k['place'] }}</td>
+        <td><img src="..{{ k['image'] }}" width="70"></td>
+      <td>{{ k['phone'] }}</td>
+         <td>{{ k['email'] }}</td>
+      <th width="50px"><button type="button" class="btn btn-danger" style="padding: 4px 23px;"><a href="/remove_officer/{{ k['officer_id'] }}"><font color="#FFFFFF">Remove</font></a></button></th>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

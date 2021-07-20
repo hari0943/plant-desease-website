@@ -1,0 +1,45 @@
+{% extends 'officer_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered">
+      <tr>
+          
+          <td colspan="2"><img src="{{ data["image"] }}" height="100px"  width="100px" alt=""/></td>
+      </tr>
+    <tr>
+      <th scope="row" width="150px">Name</th>
+      <td>&nbsp;{{ data["name"] }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Dob</th>
+      <td>&nbsp;{{ data["dob"] }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <td>&nbsp;{{ data["place"] }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Pin</th>
+      <td>&nbsp;{{ data["pin"] }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Qualification</th>
+      <td>&nbsp;{{ data["qualification"] }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Experience</th>
+      <td>&nbsp;{{ data["experience"] }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td>&nbsp;{{ data["email"] }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td>&nbsp;{{ data["phone"] }}</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</form>
+{% endblock %}

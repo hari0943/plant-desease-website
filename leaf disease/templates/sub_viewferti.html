@@ -1,0 +1,26 @@
+{% extends 'subadmin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table table-bordered">
+          <thead class="thead-light">
+
+    <tr>
+      <th scope="row">slno</th>
+      <th>name</th>
+      <th>description</th>
+      <th>pic</th>
+      <th>&nbsp;</th>
+    </tr>
+          </thead>
+      {% for k in data %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ k['name'] }}</td>
+      <td>{{ k['descrription']}}</td>
+      <td><img src="{{k['pic']}}" width="90" height="100"></td>
+        <td><button type="button" class="btn btn-danger" style="padding: 4px 23px;"><a href="/remove_ferti/{{ k['fertilizer_id'] }}"><font color="#FFFFFF">Remove</font></a></button></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'subadmin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/complaint_post_subadmin">
+
+
+  <table class="table table-bordered" style="width: fit-content;">
+
+    <tr>
+      <td>From</td>
+      <td><input type="date" name="from" class="form-control"/></td>
+      <td>To</td>
+      <td><input type="date" name="to" class="form-control"/></td>
+      <td>
+        <input type="submit" value="Search" class="btn btn-success"/>
+      </td>
+    </tr>
+
+  </table>
+
+
+  <table width="200" border="1" class="table table-bordered">
+          <thead class="thead-light">
+
+
+    <tr>
+      <th width="50px" scope="row">#</th>
+      <th>Date</th>
+      <th>Farmer Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+         <th>Complaints</th>
+   
+      <th>Reply</th>
+    </tr>
+     {% for k in data %}
+         </thead>
+
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>&nbsp;{{ k['date'] }}</td>
+      <td>{{ k['name'] }}</td>
+      <td>{{ k['email'] }}</td>
+      <td>{{ k['phone'] }}</td>
+         <td>&nbsp;{{ k['complaints'] }}</td>
+     
+      <td>
+
+          {% if k['replay']=='pending' %}
+          <a href="/reply/{{ k['complaints_id'] }}" class="btn btn-info">Reply</a>
+          {% else %}
+          {{ k['replay'] }}
+
+      {% endif %}
+      </td>
+    </tr>
+     {% endfor %}
+  </table>
+</form>
+{% endblock %}

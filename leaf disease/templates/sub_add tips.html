@@ -1,0 +1,23 @@
+{% extends 'subadmin_panel.html' %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="/add_tipsadd">
+  <table  class="table table-bordered">
+        
+
+    <tr>
+      <th width="100" scope="row">Subject</th>
+      <td><input type="text" name="textfield" id="textfield" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Content</th>
+      <td><input type="text" name="textfield2" id="textfield2" required class="form-control"/></td>
+    </tr>
+    <tr>
+            <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="Add" class="btn btn-primary"/></th>
+
+    </tr>
+        
+  </table>
+</form>
+{% endblock %}

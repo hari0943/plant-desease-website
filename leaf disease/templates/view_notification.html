@@ -1,0 +1,28 @@
+{% extends 'admin_panel.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+   <table width="200" border="1" class="table table-bordered">
+         
+
+
+    <tr>
+      <th width="50px" scope="row">#</th>
+      <th width="200px">subject</th>
+      <th >content</th>
+      <th></th>
+    </tr>
+         
+      {% for k in data %}
+
+    <tr>
+
+      <th scope="row">{{ loop.index }}</th>
+      <td>&nbsp;{{ k['subject'] }}</td>
+      <td>{{ k['content'] }}</td>
+      <td width="50px"><a href="/delnoti/{{ k['noti_id'] }}" class="btn btn-success">Delete</a></td>
+    </tr>
+      {% endfor %}
+
+  </table>
+</form>
+{% endblock %}
